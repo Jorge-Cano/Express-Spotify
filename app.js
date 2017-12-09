@@ -10,4 +10,8 @@ app.get('/', (req, res) => {
   // Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
 })
 
+app.post('/quotes', (req, res) => {
+  console.log('Hellooooooooooooooooo!')
+})
+
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
