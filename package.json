@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Jorge-Cano/Express-Spotify/issues"
   },
-  "homepage": "https://github.com/Jorge-Cano/Express-Spotify#readme"
+  "homepage": "https://github.com/Jorge-Cano/Express-Spotify#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
