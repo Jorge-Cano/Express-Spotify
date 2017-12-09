@@ -1,8 +1,11 @@
 const express = require('express');
+const bodyParser= require('body-parser')
 const app = express();
 
 //original code
 // app.get('/', (req, res) => res.send('Hello World!'))
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
@@ -11,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/quotes', (req, res) => {
-  console.log('Hellooooooooooooooooo!')
+  console.log(req.body)
 })
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
