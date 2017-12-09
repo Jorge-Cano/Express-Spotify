@@ -1,10 +1,24 @@
 const express = require('express');
 const bodyParser= require('body-parser')
 const app = express();
+const MongoClient = require('mongodb').MongoClient
 
 //original code
 // app.get('/', (req, res) => res.send('Hello World!'))
 
+
+//creating the db variable to handle requests and only start server when db is connected
+var db
+
+MongoClient.connect('mongodb://<jorgelucas>:<father>@ds133796.mlab.com:33796/star-wars-quotes', (err, database) => {
+  if (err) return console.log(err)
+  db = database
+  app.listen(3000, () => {
+    console.log('listening on 3000')
+  })
+})
+
+// express doesn't have parse body info automatically so we install bodyparser middleware
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
