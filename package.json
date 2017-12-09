@@ -1,0 +1,27 @@
+{
+  "name": "express-spotify",
+  "version": "1.0.0",
+  "description": "Express Connected to the Spotify API and some regular practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorge-Cano/Express-Spotify.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express",
+    "api",
+    "spotify",
+    "backend"
+  ],
+  "author": "Jorge Cano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorge-Cano/Express-Spotify/issues"
+  },
+  "homepage": "https://github.com/Jorge-Cano/Express-Spotify#readme"
+}
