@@ -3,11 +3,7 @@ const bodyParser = require('body-parser')
 const app = express();
 const MongoClient = require('mongodb').MongoClient
 
-//original code
 // app.get('/', (req, res) => res.send('Hello World!'))
-
-// express doesn't have parse body info automatically so we install bodyparser middleware
-app.use(bodyParser.urlencoded({extended: true}))
 
 //creating the db variable to handle requests and only start server when db is connected
 var db
@@ -19,6 +15,9 @@ MongoClient.connect('mongodb://<JorgeLucas>:<father>@ds133796.mlab.com:33796/sta
     console.log('listening on 3000')
   })
 })
+
+// express doesn't have parse body info automatically so we install bodyparser middleware
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
