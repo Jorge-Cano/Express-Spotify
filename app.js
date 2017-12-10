@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient
 //creating the db variable to handle requests and only start server when db is connected
 var db
 
-MongoClient.connect('mongodb://<jorgelucas>:<father>@ds133796.mlab.com:33796/star-wars-quotes', (err, database) => {
+MongoClient.connect('mongodb://<JorgeLucas>:<father>@ds133796.mlab.com:33796/star-wars-quotes', (err, database) => {
   if (err) return console.log(err)
   db = database
   app.listen(3000, () => {
