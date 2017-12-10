@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
   // Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
 })
 
-// app.post('/quotes', (req, res) => {
-//   console.log(req.body)
-// })
+app.post('/quotes', (req, res) => {
+  console.log(req.body)
+})
 
 app.post('/quotes', (req, res) => {
   db.collection('quotes').save(req.body, (err, result) => {
